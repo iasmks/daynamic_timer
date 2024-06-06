@@ -1,0 +1,111 @@
+body {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* .marquee {
+    width: 100%;
+    border-bottom: 5px solid;
+    animation: borderChange 5s infinite;
+    margin-bottom: 20px;
+} */
+
+@keyframes borderChange {
+    0% { border-color: red; }
+    25% { border-color: yellow; }
+    50% { border-color: green; }
+    75% { border-color: blue; }
+    100% { border-color: red; }
+}
+
+.timer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.timer {
+    width: 300px;
+    font-size: 3em;
+    padding: 20px;
+    border: 5px solid;
+    animation: borderChange 5s infinite, colorChange 10s infinite;
+    margin-bottom: 10px;
+}
+
+@keyframes colorChange {
+    0% { color: red; }
+    25% { color: yellow; }
+    50% { color: green; }
+    75% { color: blue; }
+    100% { color: red; }
+}
+
+.action-button {
+    width: 300px;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    background-color: grey;
+    color: white;
+}
+
+/* marquee {
+    color: white;
+} */
+
+#timeInput {
+    width: 300px;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 1em;
+    border: 2px solid grey;
+    background-color: black;
+    color: white;
+}
+
+
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    border-bottom: 5px solid;
+    animation: borderColorChange 5s infinite;
+}
+
+.marquee span{
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 30s linear infinite; /* Increased duration for slower scroll */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    color: white;
+}
+
+@keyframes borderColorChange {
+    0% { border-color: #ff0000; }
+    25% { border-color: #00ff00; }
+    50% { border-color: #0000ff; }
+    75% { border-color: #ffff00; }
+    100% { border-color: #ff0000; }
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
